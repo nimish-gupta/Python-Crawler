@@ -1,0 +1,19 @@
+Things to be done in crawles
+queue system in python
+	this will help in creating a help in creating a fix set of threads at a time . and when the task of one thread is finished than another task will be assigned to the thread.
+Global storage
+ 	from where threads can fetch which url next to crawl and check whether that url is already craled or not
+Types of crawling
+	per domain per thread
+		easy to implement as there will be no need of global storage for storing urls. Local storage can do work
+	fixed amount of threads 
+		these are threads which are created initially.and a queuing system will be there which will crawl next domain only when it is done completing other domains
+Storage
+	mongodb . This will store the urls against domains and will be checked that whether the url is already crawled or not 
+Limit urls
+	This is a variable which will be used to limit the urls which domain is alowed to crawl
+Depth crawling
+	limit the depth in which urls have to be crawled
+Sitemap parsing
+
+

@@ -64,6 +64,10 @@ def index(request):
             if limit and page >= limit_value:
                 break
             url = urls_crawled_status['uncrawled'][page]
+            if url in urls_crawled_status['crawled']:
+                page=page+1;
+                continue
+            urls_crawled_status['crawled'].append(url)
             data_fetched = fetch_content_from_url(url)
             if (data_fetched['error']):
                 display_data[data_fetched['url']] = data_fetched['soup']
